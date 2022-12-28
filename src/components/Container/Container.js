@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './index.css'
+import './container.css'
 
 export const Container = ({ children }) => {
   return (

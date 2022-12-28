@@ -1,0 +1,43 @@
+.todolist {
+}
+
+.add-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-todo {
+  padding: 0.3rem;
+  width: 11rem;
+}
+
+.submit-btn {
+  margin-left: 1rem;
+  background: #411feb;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
+}
+
+.todolist__items {
+  margin-top: 1rem;
+}
+
+.todolist__item {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  font-weight: bold;
+}
+
+.action-item {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
