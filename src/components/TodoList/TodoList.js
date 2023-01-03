@@ -5,9 +5,9 @@ import { postTodoList, deleteTodoList } from '../../api'
 import { Container } from '../../components'
 import './todolist.css'
 
-const TodoListItem = ({ loading, data, handleDelete }) => {
+export const TodoListItem = ({ loading, data, handleDelete }) => {
   if (loading) {
-    return <h3>Loading ...</h3>
+    return <h3 data-testid="loading-task">Loading ...</h3>
   }
 
   if (data?.length === 0) {
@@ -17,7 +17,11 @@ const TodoListItem = ({ loading, data, handleDelete }) => {
   return (
     <div className="todolist__items">
       {data?.map((item, index) => (
-        <div className="todolist__item" key={index}>
+        <div
+          className="todolist__item"
+          key={index}
+          data-testid="todo-list-item"
+        >
           <div className="item">{item.title}</div>
           <button
             className="action-item"
@@ -71,7 +75,7 @@ export const TodoList = () => {
   }
 
   return (
-    <Container>
+    <Container data-testid="todo-list">
       <div className="todolist">
         <h1>TODO LIST</h1>
         <form className="add-form" onSubmit={handleSubmit}>

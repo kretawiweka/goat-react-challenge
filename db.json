@@ -5,32 +5,12 @@
       "title": "Finish an interview"
     },
     {
-      "id": 2,
-      "title": "Study React"
+      "title": "Number Three",
+      "id": 4
     },
     {
-      "id": 3,
-      "title": "Submit a test result"
-    },
-    {
-      "id": 4,
-      "title": "test"
-    },
-    {
-      "title": "number five",
+      "title": "task name",
       "id": 5
-    },
-    {
-      "title": "number six",
-      "id": 6
-    },
-    {
-      "title": "nine",
-      "id": 9
-    },
-    {
-      "title": "Ten",
-      "id": 10
     }
   ]
 }

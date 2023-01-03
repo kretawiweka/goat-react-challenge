@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint '**/*.{js,jsx}'",
     "testcov": "yarn test --coverage --watchAll=false",
-    "server": "json-server --watch db.json --port 3001"
+    "server": "json-server --watch db.json --port 8001"
   },
   "eslintConfig": {
     "extends": [

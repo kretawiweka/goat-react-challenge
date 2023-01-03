@@ -15,7 +15,7 @@ export const request = async (url, opts = {}) => {
   let data = isResJson(response) ? await response.json() : await response.text()
 
   if (response.ok) {
-    return response.status === 204 ? '' : data
+    return data
   } else {
     return Promise.reject(response)
   }

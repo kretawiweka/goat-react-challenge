@@ -30,7 +30,6 @@ export const useGetTodoList = () => {
 
 export const usePostTodoList = (task) => {
   const [error, setError] = useState('')
-  console.log('use task', task)
 
   const postTodoListItem = async () => {
     try {
