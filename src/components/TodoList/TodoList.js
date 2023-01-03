@@ -10,6 +10,7 @@ export const TodoListItem = ({ loading, data, handleDelete }) => {
     return <h3 data-testid="loading-task">Loading ...</h3>
   }
 
+  //  show empty state (when task is empty)
   if (data?.length === 0) {
     return <h3>Empty</h3>
   }

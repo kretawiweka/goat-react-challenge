@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { getTodoList, postTodoList } from '../api'
+import { getTodoList } from '../api'
 
+//  custom hooks for get task list
 export const useGetTodoList = () => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState([])
@@ -25,24 +26,5 @@ export const useGetTodoList = () => {
     fetchTodoList,
     loading,
     data,
-  }
-}
-
-export const usePostTodoList = (task) => {
-  const [error, setError] = useState('')
-
-  const postTodoListItem = async () => {
-    try {
-      const res = await postTodoList(task)
-      return res
-    } catch (err) {
-      console.error(err)
-      setError(err)
-    }
-  }
-
-  return {
-    postTodoListItem,
-    error,
   }
 }

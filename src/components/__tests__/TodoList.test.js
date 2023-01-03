@@ -45,9 +45,13 @@ describe('TodoList component', () => {
     )
     const items = screen.getAllByTestId('todo-list-item')
     const initItemsLength = items.length
+    const task = 'Test add task from component'
 
-    fireEvent.change(input, { target: { value: 'Test add task' } })
-    expect(input.value).toBe('Test add task')
+    // fill "add task" input
+    fireEvent.change(input, { target: { value: task } })
+    expect(input.value).toBe(task)
+
+    // click button submit "Add"
     fireEvent.click(
       screen.getByRole('button', {
         name: /Add/i,
@@ -55,6 +59,7 @@ describe('TodoList component', () => {
     )
 
     await waitFor(() =>
+      //  make sure item task length is increases
       expect(screen.getAllByTestId('todo-list-item')).toHaveLength(
         initItemsLength + 1,
       ),
