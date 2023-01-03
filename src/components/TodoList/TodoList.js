@@ -15,7 +15,7 @@ export const TodoListItem = ({ loading, data, handleDelete }) => {
   }
 
   return (
-    <div className="todolist__items">
+    <div className="todolist__items" data-testid="todo-list-item-container">
       {data?.map((item, index) => (
         <div
           className="todolist__item"
@@ -84,6 +84,7 @@ export const TodoList = () => {
               value={task}
               className="input-todo"
               placeholder="Task name"
+              aria-label="add-task-input"
               onChange={(e) => setTask(e.target.value)}
             />
           </div>
