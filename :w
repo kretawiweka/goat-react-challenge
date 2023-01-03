@@ -1,0 +1,9 @@
+import { renderHook } from '@testing-library/react-hooks'
+import { useGetTodoList } from '../todoList'
+
+describe('TodoListItem component ', () => {
+  it('returns todo list', () => {
+    const { result } = renderHook(() => useGetTodoList())
+    expect(result.current.loading).toBe(true)
+  })
+})

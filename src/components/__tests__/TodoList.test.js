@@ -17,14 +17,14 @@ const tasks = [
 ]
 
 describe('TodoListItem component ', () => {
-  it('TodoListItem must have correct number of task items', () => {
+  it('must have correct number of task items', () => {
     const { getAllByTestId } = render(
       <TodoListItem data={tasks} loading={false} handleSubmit={() => {}} />,
     )
     const items = getAllByTestId('todo-list-item')
     expect(items).toHaveLength(3)
   })
-  it('TodoListItem must loading when loading props is true', () => {
+  it('must loading when loading props is true', () => {
     const { getByTestId } = render(
       <TodoListItem data={tasks} loading={true} handleSubmit={() => {}} />,
     )
@@ -34,7 +34,7 @@ describe('TodoListItem component ', () => {
 })
 
 describe('TodoList component', () => {
-  it('Add task in todo list', async () => {
+  it('add task in todo list', async () => {
     render(<TodoList />)
 
     const input = screen.getByLabelText('add-task-input')
